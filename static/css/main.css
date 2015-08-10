@@ -1,0 +1,12 @@
+body {
+	background-color: green;
+	color: white;
+}
+
+
+#banner {
+  background-image: url(../static/images/gobanner.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 460px;
+}

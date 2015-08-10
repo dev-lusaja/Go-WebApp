@@ -1,0 +1,28 @@
+{{ define "search_user" }}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Listado de Usuarios</title>
+{{template "styles"}}
+{{template "scripts"}}
+</head>
+<body>
+</body>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+			<h1>Datos del usuario</h1>
+				<ul id="usuarios" class="list-group">
+					<li class="list-group-item"><p>Codigo: </p>{{ .Codigo }}</li>
+					<li class="list-group-item"><p>Usuario: </p>{{ .User }}</li>
+					<li class="list-group-item"><p>Nombre: </p>{{ .Name }}</li>
+					<li class="list-group-item"><p>Apellido: </p>{{ .Ape }}</li>
+					<li class="list-group-item"><p>Edad: </p>{{ .Edad }}</li>
+				</ul>
+				<hr>
+		</div>
+	</div>
+</div>
+</html>
+{{ end }}

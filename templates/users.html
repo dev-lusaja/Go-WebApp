@@ -1,0 +1,31 @@
+{{ define "users" }}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Listado de Usuarios</title>
+{{template "styles"}}
+{{template "scripts"}}
+</head>
+<body>
+</body>
+<div class="container">
+	<div class="row">
+		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+			<h1>Datos de usuarios</h1>
+			{{ range $key, $value := .}}
+				<ul  id="usuarios" class="list-group">
+					<li class="list-group-item"><p>Codigo: </p>{{ $value.Codigo }}</li>
+					<li class="list-group-item"><p>Usuario: </p>{{ $value.User }}</li>
+					<li class="list-group-item"><p>Nombre: </p>{{ $value.Name }}</li>
+					<li class="list-group-item"><p>Apellido: </p>{{ $value.Ape }}</li>
+					<li class="list-group-item"><p>Edad: </p>{{ $value.Edad }}</li>
+					<li class="list-group-item"><p><a href="/user/{{ $value.Codigo }}">Eliminar</a></p></li>
+				</ul>
+				<hr>
+			{{ end }}
+		</div>
+	</div>
+</div>
+</html>
+{{ end }}

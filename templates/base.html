@@ -1,0 +1,28 @@
+{{ define "base" }}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>WebApp Golang</title>
+{{template "scripts"}}
+{{template "styles"}}
+</head>
+
+<body>
+<div id="banner" class="jumbotron">
+	<div class="container-fluid">
+		<p>
+			<a class="btn btn-primary btn-lg" href="http://localhost:5000/form">Crear usuarios</a>
+			<a class="btn btn-primary btn-lg" href="http://localhost:5000/user">Listar usuarios</a>
+		</p>
+	</div>
+<!-- 	<div class="container">
+		<h1>APIREST desarrollada en GoLang</h1>
+		<kbd>Bienvenido Gopher..!</kbd>
+	</div> -->
+</div>
+
+</body>
+
+</html>
+{{end}}
